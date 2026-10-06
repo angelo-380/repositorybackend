@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liquid Glass</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at 30% 20%, #4a6787 0%, #1f395c 40%, #0d223a 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Formas y esferas líquidas limpias de fondo */
+    .bg-fluid-top {
+      position: absolute;
+      top: -10%;
+      right: -8%;
+      width: 520px;
+      height: 520px;
+      background: linear-gradient(135deg, #007aff, #0040aa);
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      opacity: 0.85;
+    }
+
+    .bg-sphere-top {
+      position: absolute;
+      top: 10%;
+      right: 22%;
+      width: 240px;
+      height: 240px;
+      background: #007aff;
+      border-radius: 50%;
+      opacity: 0.9;
+    }
+
+    .bg-fluid-center {
+      position: absolute;
+      top: 32%;
+      left: 18%;
+      width: 420px;
+      height: 380px;
+      background: linear-gradient(120deg, #1d72dd, #0b47a1);
+      border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+      opacity: 0.75;
+    }
+
+    .bg-fluid-bottom {
+      position: absolute;
+      bottom: -15%;
+      left: -10%;
+      width: 560px;
+      height: 500px;
+      background: linear-gradient(160deg, #0084ff, #003580);
+      border-radius: 55% 45% 40% 60% / 60% 40% 60% 40%;
+      opacity: 0.9;
+    }
+
+    .bg-sphere-bottom {
+      position: absolute;
+      bottom: 2%;
+      left: 20%;
+      width: 210px;
+      height: 210px;
+      background: #2b7fff;
+      border-radius: 50%;
+      opacity: 0.95;
+    }
+
+    .bg-sphere-small {
+      position: absolute;
+      bottom: 22%;
+      left: 15%;
+      width: 70px;
+      height: 70px;
+      background: #4da0ff;
+      border-radius: 50%;
+    }
+
+    /* Placa de vidrio vertical translúcida */
+    .glass-card {
+      position: relative;
+      z-index: 10;
+      width: 320px;
+      height: 500px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      border-top: 2px solid rgba(255, 255, 255, 0.75);
+      border-left: 1.5px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 
+        0 30px 60px rgba(4, 15, 30, 0.45),
+        inset 0 1px 2px rgba(255, 255, 255, 0.6),
+        inset 0 -1px 2px rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Reflejos de destello sutiles */
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15%;
+      width: 45%;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    }
+
+    .glass-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 20%;
+      width: 40%;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    }
+
+    /* Texto exacto: Hola */
+    .glass-text {
+      color: #ffffff;
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      text-shadow: 0 4px 15px rgba(0, 30, 70, 0.4);
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-fluid-top"></div>
+  <div class="bg-sphere-top"></div>
+  <div class="bg-fluid-center"></div>
+  <div class="bg-fluid-bottom"></div>
+  <div class="bg-sphere-bottom"></div>
+  <div class="bg-sphere-small"></div>
+
+  <div class="glass-card">
+    <span class="glass-text">Hola</span>
+  </div>
+</body>
+</html>
