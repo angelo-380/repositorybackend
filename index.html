@@ -22,6 +22,7 @@
       position: relative;
     }
 
+    /* Formas y esferas líquidas limpias de fondo */
     .bg-fluid-top {
       position: absolute;
       top: -10%;
@@ -87,10 +88,18 @@
       border-radius: 50%;
     }
 
+    /* Enlace que envuelve la tarjeta */
+    .glass-link {
+      text-decoration: none;
+      display: block;
+      position: relative;
+      z-index: 50;
+      cursor: pointer;
+    }
+
     /* Placa de vidrio vertical translúcida */
     .glass-card {
       position: relative;
-      z-index: 10;
       width: 320px;
       height: 500px;
       border-radius: 28px;
@@ -107,6 +116,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 40px 70px rgba(4, 15, 30, 0.6);
     }
 
     /* Reflejos de destello sutiles */
@@ -149,8 +164,11 @@
   <div class="bg-sphere-bottom"></div>
   <div class="bg-sphere-small"></div>
 
-  <div class="glass-card">
-    <span class="glass-text">Hola</span>
-  </div>
+  <!-- Contenedor Glass con enlace a /profile -->
+  <a href="/profile" class="glass-link">
+    <div class="glass-card">
+      <span class="glass-text">Hola</span>
+    </div>
+  </a>
 </body>
 </html>

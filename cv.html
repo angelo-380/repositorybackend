@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae - Anjoph</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="relative min-h-screen flex items-center justify-center p-4 md:p-8 font-sans overflow-x-hidden bg-radial from-[#1b3453] via-[#0d2035] to-[#050b14] text-white">
+
+  <!-- Orbes fluidos de fondo -->
+  <div class="absolute -top-20 -left-16 w-80 h-80 bg-blue-500/25 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-16 right-10 w-96 h-96 bg-indigo-600/20 rounded-full blur-[90px] pointer-events-none"></div>
+
+  <!-- Botón Volver al Perfil -->
+  <a href="/profile" class="absolute top-6 left-6 z-20 flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 text-xs font-semibold tracking-wider hover:bg-white/20 transition-all text-gray-200">
+    <i class="fa-solid fa-arrow-left"></i> Profile
+  </a>
+
+  <!-- Tarjeta CV Liquid Glass Breve -->
+  <main class="relative z-10 max-w-xl w-full rounded-3xl overflow-hidden backdrop-blur-2xl bg-white/[0.08] border border-white/30 border-t-white/60 border-l-white/50 shadow-[0_30px_70px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.7)] p-6 md:p-10 space-y-6 mt-12 md:mt-0">
+    
+    <!-- Encabezado CV -->
+    <header class="border-b border-white/15 pb-4 flex justify-between items-end">
+      <div>
+        <h1 class="text-2xl md:text-3xl font-bold tracking-wider text-white">CURRICULUM VITAE</h1>
+        <p class="text-sky-300 text-xs tracking-widest uppercase mt-0.5">Anjoph &bull; Developer &amp; Artist</p>
+      </div>
+      <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-gray-300 font-medium">2026</span>
+    </header>
+
+    <!-- Resumen Breve -->
+    <section>
+      <h2 class="text-xs uppercase tracking-widest text-sky-200 font-bold mb-2">Profile</h2>
+      <p class="text-gray-300 text-xs md:text-sm leading-relaxed">
+        Passionate digital illustrator and software developer focused on modern web design, creative coding, and clean user interfaces.
+      </p>
+    </section>
+
+    <!-- Habilidades -->
+    <section>
+      <h2 class="text-xs uppercase tracking-widest text-sky-200 font-bold mb-2">Core Skills</h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/20 text-xs text-gray-200">HTML5 / CSS3</span>
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/20 text-xs text-gray-200">Tailwind CSS</span>
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/20 text-xs text-gray-200">JavaScript / Node.js</span>
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/20 text-xs text-gray-200">Digital Illustration</span>
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/20 text-xs text-gray-200">Git / GitHub</span>
+      </div>
+    </section>
+
+    <!-- Formación y Proyectos -->
+    <section class="space-y-3">
+      <h2 class="text-xs uppercase tracking-widest text-sky-200 font-bold">Experience &amp; Education</h2>
+      <div class="border-l-2 border-white/20 pl-3 space-y-3 text-xs">
+        <div>
+          <p class="font-semibold text-white">Web Development &amp; Cloud Deployment</p>
+          <p class="text-gray-400">Node.js backend architectures &amp; production deployment on Render.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-white">Freelance Digital Artist</p>
+          <p class="text-gray-400">Character design, vector assets, and bespoke artwork commissions.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
